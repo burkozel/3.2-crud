@@ -1,5 +1,6 @@
-from rest_framework.viewsets import ModelViewSet
-
+from rest_framework.viewsets import ModelViewSetfrom
+from rest_framework.filters import SearchFilter
+django_filters.rest_framework import DjangoFilterBackend
 from logistic.models import Product, Stock
 from logistic.serializers import ProductSerializer, StockSerializer
 
