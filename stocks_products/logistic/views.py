@@ -7,6 +7,7 @@ from rest_framework.pagination import PageNumberPagination
 
 
 class ProductViewSet(ModelViewSet):
+    page_size = 100
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     pagination_class = PageNumberPagination
@@ -14,6 +15,7 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['title', 'description']
 
 class StockViewSet(ModelViewSet):
+    page_size = 100
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     pagination_class = PageNumberPagination
